@@ -15,7 +15,7 @@ This script facilitates the migration of Task Scheduler jobs from one server to 
 - Path to the directory containing XML files for each task (export_directory).
 
 **2. Run the Script:**
-- Execute the script on your local machine to export and import Task Scheduler jobs from Source Server to Destination server.(Make sure your local machine is whitelisted to access both of those servers.)
+- Execute the script on your local machine to export and import Task Scheduler jobs from Source Server to Destination server.( Make sure your local machine can access both of these servers.)
 
 **3. PowerShell script:**
 - In powershell Copy code
