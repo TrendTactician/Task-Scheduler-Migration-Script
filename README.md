@@ -9,8 +9,7 @@ This script facilitates the migration of Task Scheduler jobs from one server to 
 
 ## Usage
 
-**1. Update Script Variables:**
-Open the script file and update the following variables:
+**1. Open the script file and update the following variables:**
 - Source and destination server IP addresses (source_server and destination_server).
 - Usernames and passwords for both servers (source_username, source_password, destination_username, destination_password).
 - Path to the directory containing XML files for each task (export_directory).
