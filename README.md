@@ -1,34 +1,35 @@
 # Task Scheduler Migration Script
-
-This script facilitates the migration of Task Scheduler jobs from one server to another using the `schtasks` command-line tool.
+**This PowerShell script automates the migration of all scheduled tasks from one Windows server to another. It exports tasks from the source server as XML files and imports them to the destination server, ensuring a reliable and repeatable migration process.**
 
 ## Prerequisites
 
-- Ensure that you have the necessary permissions on both the source and destination servers to perform Task Scheduler operations.
-- Verify that the `schtasks` command-line tool is available on the servers.
+**Windows Server 2012 or later (for ScheduledTasks module).**
+**PowerShell 5.1 or later.**
+
+- Administrative permissions on both source and destination servers.
+
+- Network connectivity from your local machine to both servers.
 
 ## Usage
 
-**1. Open the script file and update the following variables:**
-- Source and destination server IP addresses (source_server and destination_server).
-- Usernames and passwords for both servers (source_username, source_password, destination_username, destination_password).
-- Path to the directory containing XML files for each task (export_directory).
+**1. Update Configuration:**
+- Set the source and destination server IP addresses.
+- Enter valid usernames and passwords for both servers.
+- Specify the directory for exporting XML files.
 
 **2. Run the Script:**
-- Execute the script on your local machine to export and import Task Scheduler jobs from Source Server to Destination server.( Make sure your local machine can access both of these servers.)
+- Execute the script from your local machine in PowerShell.
+- Ensure your machine can remotely access both servers.
 
-**3. PowerShell script:**
-- In powershell Copy code
-- ```.\Task-Scheduler-Migration-Script.ps1```
+**3. Review Output:**
+- Check the console for success or error messages.
+- All tasks will be exported to XML files and imported to the destination server.
 
-**4. Review Output:**
-- Check the console output for any error messages or confirmations. The script will export tasks from the source server and create them on the destination server.
-
-## Additional Notes
-- For advanced usage or customization, consider exploring the script code.
-
-## Contributing
-- If you encounter issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+## Script Features
+- Exports all scheduled tasks from the source server to XML files.
+- Imports each XML file as a scheduled task on the destination server.
+- Handles secure remote authentication and centralized configuration.
+- Provides clear console output for troubleshooting.
 
 ## License
 - This project is licensed under the MIT License.
